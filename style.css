@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(16, 25px);
+  grid-auto-rows: 25px;
+}
+
+.grid-item {
+  background-color: rgb(7, 132, 173);
+  border: 2px solid red;
+}
+
+.mouse-over {
+  background-color: rgba(191, 191, 236, 0.473);
+}
