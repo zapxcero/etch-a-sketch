@@ -1,18 +1,22 @@
-// Create a box wherein a div forming a complete square in which each side is of length X
-
-//write a function that would generate a square made up of divs
-
 container = document.querySelector(".container");
-
 divs = container.querySelectorAll("div");
-
-divs.forEach((div) => {
-  div.addEventListener("mouseover", mouseOver);
-});
+clearButton = document.querySelector("#clear");
 
 function mouseOver(e) {
   if (e.fromElement.classList.contains("grid-item"))
     e.fromElement.classList.add("mouse-over");
 }
 
+function clearGrid() {
+  divs.forEach((div) => {
+    div.classList.remove("mouse-over");
+  });
+}
+
+divs.forEach((div) => {
+  div.addEventListener("mouseover", mouseOver);
+});
+
 window.addEventListener("mouseover", mouseOver);
+
+clearButton.addEventListener("click", clearGrid);
