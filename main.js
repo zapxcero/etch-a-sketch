@@ -5,7 +5,7 @@ function createDivs(length = 16) {
     div.classList.add("grid-item");
     container.appendChild(div);
   }
-  container.style.cssText = `display: grid; width: 900px; height: 900px; grid-template: repeat(${length}, 1fr) / repeat(${length}, 1fr);`;
+  container.style.cssText = `display: grid; width: 450px; height: 450px; grid-template: repeat(${length}, 1fr) / repeat(${length}, 1fr);`;
 }
 
 function mouseOver(e) {
